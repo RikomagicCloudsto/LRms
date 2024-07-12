@@ -55,7 +55,7 @@ print(data)
 data = ser.readline().decode('utf-8').strip()
 print(data)
 
-ser.write(b'AT+PARAMETER=12,7,1,4\r\n') # Set LoRa parameters - see RYLR documentation
+ser.write(b'AT+PARAMETER=9,7,1,12\r\n') # Set LoRa parameters - see RYLR documentation
 print("Setting LoRa Parameters for LRms")
 time.sleep(1)
 data = ser.readline().decode('utf-8').strip()
