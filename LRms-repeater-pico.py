@@ -20,7 +20,7 @@ time.sleep(2)
 data = uart.readline().decode('utf-8').strip()
 print(data)
 
-uart.write(b'AT+OPMODE=10\r\n')  # Set RYLR993 to poprietary mode - not needed for RYLR998
+uart.write(b'AT+OPMODE=1\r\n')  # Set RYLR993 to poprietary mode - not needed for RYLR998
 print("Set RYLR993 to proprietary mode")
 time.sleep(2)
 data = uart.readline().decode('utf-8').strip()
@@ -42,8 +42,8 @@ print(data)
 data = uart.readline().decode('utf-8').strip()
 print(data)
 
-uart.write(b'AT+ADDRESS=1\r\n') # Set node ID
-print("Setting Node ID to 1")
+uart.write(b'AT+ADDRESS=100\r\n') # Set node ID
+print("Setting Node ID to 100")
 time.sleep(1)
 data = uart.readline().decode('utf-8').strip()
 print(data)
@@ -68,7 +68,7 @@ print(data)
 data = uart.readline().decode('utf-8').strip()
 print(data)
 # Define your station ID
-my_ID = "55"
+my_ID = "100"
 
 # Continuous loop to read from serial port
 while True:
