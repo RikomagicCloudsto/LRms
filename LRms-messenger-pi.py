@@ -8,7 +8,7 @@ import sys
 # BACKLIGHT_PIN = 42
 # GPIO.setup(BACKLIGHT_PIN, GPIO.OUT)
 
-# Initialize UART
+# Initialize UART - NOTE Baudrate is 9600 FOR RYLR993 and 115200 for RYLR998
 uart = serial.Serial("/dev/ttyS0", baudrate=9600, timeout=1)
 
 # Send AT commands to configure the RYLR993 or RYLR998
