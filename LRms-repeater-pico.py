@@ -9,7 +9,7 @@ gpio2 = Pin(2, Pin.OUT)  # Assuming GPIO 2 is available and not in use
 # Initialize LED
 led.value(1)
 
-# Serial port configuration
+# Initialize UART - NOTE Baudrate is 9600 FOR RYLR993 and 115200 for RYLR998
 uart = machine.UART(0, baudrate=9600, tx=machine.Pin(0), rx=machine.Pin(1))
 
 # Send AT commands to configure the RYLR993 or RYLR998
